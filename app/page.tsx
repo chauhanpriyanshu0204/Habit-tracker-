@@ -40,9 +40,9 @@ export default function Page() {
   )
 
   return (
-    <main className="desk-surface min-h-screen w-full px-3 py-6 sm:px-6 sm:py-10">
-      <div className="mx-auto max-w-4xl">
-        <div className="notebook-paper notebook-margin relative rounded-sm px-4 py-6 pl-12 sm:px-8 sm:py-8 sm:pl-16">
+    <main className="desk-surface min-h-dvh w-full overflow-x-hidden px-3 py-6 sm:px-6 sm:py-10">
+      <div className="mx-auto w-full max-w-4xl">
+        <div className="notebook-paper notebook-margin relative overflow-hidden rounded-sm px-4 py-6 pl-12 sm:px-8 sm:py-8 sm:pl-16">
           {/* Header */}
           <header className="mb-6">
             <h1 className="font-hand text-5xl leading-none text-primary sm:text-6xl">My Habit Diary</h1>
