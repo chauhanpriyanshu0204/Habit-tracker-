@@ -77,7 +77,7 @@ function fireReminder() {
   }
 
   new Notification("My Habit Diary", {
-    body: "Hey! Don't forget to log your habits today 📝",
+    body: "📝 Don't forget to log your habits today!",
     icon: "/icon.png",
     tag: "habit-daily-reminder",
   })
@@ -88,7 +88,7 @@ export function sendTestReminder(): boolean {
   if (typeof window === "undefined" || !("Notification" in window)) return false
   if (Notification.permission !== "granted") return false
   new Notification("My Habit Diary", {
-    body: "Hey! Don't forget to log your habits today 📝",
+    body: "📝 Don't forget to log your habits today!",
     icon: "/icon.png",
     tag: "habit-daily-reminder-test",
   })

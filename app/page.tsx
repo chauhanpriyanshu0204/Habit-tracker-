@@ -12,6 +12,7 @@ import { MonthlySummary } from "@/components/monthly-summary"
 import { HabitStatsDrawer } from "@/components/habit-stats-drawer"
 import { SettingsPanel } from "@/components/settings-panel"
 import { FloatingWidget } from "@/components/floating-widget"
+import { NotificationPrompt } from "@/components/notification-prompt"
 import { longDate } from "@/lib/habits"
 import { cn } from "@/lib/utils"
 
@@ -121,6 +122,14 @@ export default function Page() {
       {settingsLoaded && settings.showWidget && (
         <FloatingWidget habits={habits} onToggle={toggleCell} />
       )}
+
+      <NotificationPrompt
+        show={settingsLoaded && !settings.permissionPrompted}
+        permission={permission}
+        onEnable={requestPermission}
+        onEnabled={() => update({ notificationsEnabled: true })}
+        onDismiss={() => update({ permissionPrompted: true })}
+      />
     </main>
   )
 }
